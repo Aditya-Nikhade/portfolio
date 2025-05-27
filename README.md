@@ -1,5 +1,3 @@
-# 🌐 Live Demo
-
+🌐 Live Demo
 Visit the live website here:
-
-**🔗 [View Portfolio](https://portfolio-sepia-six-38.vercel.app/)**
+🔗 <a href="https://portfolio-sepia-six-38.vercel.app/" target="_blank">View Portfolio</a>
