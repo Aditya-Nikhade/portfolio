@@ -149,7 +149,7 @@ export default function Home() {
               <FaGithub size={32} /> {/* Increased icon size */}
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/aditya-nikhade-a88aa7224/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-600 transition"
@@ -161,6 +161,21 @@ export default function Home() {
               <a href="https://drive.google.com/file/d/1ppzZQAGM8RA53leBhyr_2QI0QY2m24xk/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
             </RainbowButton>
           </div>
+          <a
+            href="https://monkeytype.com/profile/Aditya-Nikhade"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="MonkeyType"
+            className="hover:text-blue-600 transition"
+          >
+            <Image
+              src="/monkeytype.png"
+              alt="MonkeyType"
+              width={32}
+              height={32}
+              className="object-contain"
+            />
+          </a>
         </div>
       </section>
     </main>
