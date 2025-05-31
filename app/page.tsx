@@ -162,7 +162,7 @@ export default function Home() {
             </RainbowButton>
           </div>
           <a
-            href="https://monkeytype.com/profile/Aditya-Nikhade"
+            href="https://monkeytype.com/profile/Adchamp"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="MonkeyType"
