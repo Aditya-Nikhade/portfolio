@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -15,6 +15,7 @@
     "clsx": "^2.1.1",
     "cobe": "^0.6.3",
     "framer-motion": "^12.12.2",
+    "geist": "^1.4.2",
     "lucide-react": "^0.511.0",
     "motion": "^12.12.2",
     "next": "14.2.4",
