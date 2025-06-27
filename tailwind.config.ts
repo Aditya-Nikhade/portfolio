@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
     darkMode: ["class"],
@@ -57,9 +58,12 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		fontFamily: {
-  			cubano: ['Cubano', 'sans-serif'],
+  			base: ["Inter", "Geist", "sans-serif"],
+  			heading: ["Right Grotesk", "Geist", "Inter", "sans-serif"],
+  			cubano: ["Cubano", "sans-serif"],
+  			archivo: ["\"Archivo Black\"", "sans-serif"],
   		},
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;
