@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from 'next';
 
-// Your data source remains the same
+// --- Data Source ---
+// (It's good practice to define data outside the component)
 const blogs = [
   {
     title: "How I Built My Portfolio",
@@ -19,16 +21,38 @@ const blogs = [
   }
 ];
 
-// --- THE FIX IS HERE ---
-// 1. Define the props type separately. This helps TypeScript's inference engine.
+// --- Type Definition ---
+// This is the correct and most stable way to type props for pages.
 type Props = {
   params: {
     slug: string;
   };
 };
 
-// 2. Use the defined Props type in your component signature.
-export default function BlogPostPage({ params }: Props) {
+// --- generateMetadata Function (Good for SEO and types) ---
+// This helps Next.js understand the page's context even better.
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const blog = blogs.find(b => b.slug === params.slug);
+  if (!blog) {
+    return { title: "Not Found" };
+  }
+  return {
+    title: blog.title,
+    description: blog.excerpt,
+  };
+}
+
+// --- generateStaticParams Function ---
+// Stays the same: a standard function is correct.
+export async function generateStaticParams() {
+  return blogs.map(blog => ({
+    slug: blog.slug,
+  }));
+}
+
+// --- Page Component ---
+// Make the component async, which is standard for Server Components.
+export default async function BlogPostPage({ params }: Props) {
   const blog = blogs.find(b => b.slug === params.slug);
 
   if (!blog) {
@@ -39,15 +63,8 @@ export default function BlogPostPage({ params }: Props) {
     <main className="max-w-2xl mx-auto py-12 px-4">
       <Link href="/blogs" className="text-blue-600 hover:underline mb-4 inline-block">← Back to Blogs</Link>
       <h1 className="text-4xl font-bold mb-2">{blog.title}</h1>
-      <div className="text-sm text-gray-500 mb-6">{blog.date}</div>
+      <p className="text-sm text-gray-500 mb-6">{new Date(blog.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
       <div className="prose prose-lg max-w-none">{blog.content}</div>
     </main>
   );
-}
-
-// This function should remain a standard function declaration.
-export function generateStaticParams() {
-  return blogs.map(blog => ({
-    slug: blog.slug,
-  }));
 }
