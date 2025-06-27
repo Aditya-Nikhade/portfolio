@@ -39,15 +39,15 @@ const projects = [
     title: "ChatApp",
     description: "A classic deployed chat application made with MERN, Redis and Socket.io",
     link: "#", // Add a dummy link if needed
-    githubLink: "https://github.com/Aditya-Nikhade/ChatApp",
-    imageLink: "/work_in_progress.jpg"
+    githubLink: "https://github.com/Aditya-Nikhade/ec2_cicd",
+    imageLink: "/chatapp.png"
   },
   {
     title: "Insight-Bot",
     description: "An AI-powered analytics tool which provides details about sales, customers and products",
     link: "#",
-    githubLink: "https://github.com/Aditya-Nikhade/Insight-Bot",
-    imageLink: "/work_in_progress.jpg"
+    githubLink: "https://github.com/Aditya-Nikhade/insight-bot",
+    imageLink: "/insightbot.png"
   },
   {
     title: "In progress",
@@ -155,20 +155,12 @@ export default function Home() {
           </div>
           {/* Big Blogs Button below links */}
           <a
-<<<<<<< HEAD
             href="/blogs"
             className="border-2 border-foreground bg-white px-10 py-6 shadow-[4px_4px_0px_0px_var(--border)] text-2xl font-bold hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center w-full mb-2"
-=======
-            href="https://monkeytype.com/profile/Adchamp"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="MonkeyType"
-            className="hover:text-blue-600 transition"
->>>>>>> afb5a6d0b9c1d28a63a1b69f49c7b7883637bc40
           >
             Blogs
           </a>
-          </div>
+        </div>
       </section>
     </main>
   );

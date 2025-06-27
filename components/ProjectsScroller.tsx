@@ -44,7 +44,7 @@ export default function ProjectsScroller({ projects }: { projects: Project[] }) 
             {/* Bottom Image */}
             <div className="relative w-full h-40 border-t-2 border-neutral-300">
               {/* Replace src with actual project image path */}
-              <Image src={project.imageLink} alt={project.title} fill className="object-fill" />
+              <Image src={project.imageLink} alt={project.title} fill className="fill" />
             </div>
           </div>
         ))}
