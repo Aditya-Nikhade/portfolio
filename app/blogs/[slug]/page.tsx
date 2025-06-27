@@ -31,9 +31,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   );
 }
 
-export function generateStaticParams() {
+export function generateStaticParams(): { slug: string }[] {
   return [
     { slug: "how-i-built-my-portfolio" },
     { slug: "why-i-love-open-source" }
   ];
-} 
+}
