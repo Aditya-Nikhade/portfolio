@@ -35,7 +35,8 @@ export default function BlogPostPage({ params }: Props) {
   );
 }
 
-export function generateStaticParams(): { slug: string }[] {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  // No need for await here, it's a simple synchronous return
   return [
     { slug: "how-i-built-my-portfolio" },
     { slug: "why-i-love-open-source" }
