@@ -20,7 +20,9 @@ const blogs = [
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const blog = blogs.find(b => b.slug === params.slug);
-  if (!blog) return notFound();
+  if (!blog) {
+    notFound();
+  }
   return (
     <main className="max-w-2xl mx-auto py-12 px-4">
       <Link href="/blogs" className="text-blue-600 hover:underline mb-4 inline-block">← Back to Blogs</Link>
@@ -31,8 +33,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   );
 }
 
-// Use a const, not a function, and do NOT annotate the type!
-export const generateStaticParams = () => [
-  { slug: "how-i-built-my-portfolio" },
-  { slug: "why-i-love-open-source" }
-];
+// CORRECTED: Use a standard function declaration.
+// This function tells Next.js which blog pages to pre-build at build time.
+export function generateStaticParams() {
+  // Good practice: derive params from your data source directly.
+  return blogs.map(blog => ({
+    slug: blog.slug,
+  }));
+}
