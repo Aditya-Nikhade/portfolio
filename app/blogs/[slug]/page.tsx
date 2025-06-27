@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
+// Your data source remains the same
 const blogs = [
   {
     title: "How I Built My Portfolio",
@@ -18,11 +19,22 @@ const blogs = [
   }
 ];
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+// --- THE FIX IS HERE ---
+// 1. Define the props type separately. This helps TypeScript's inference engine.
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+
+// 2. Use the defined Props type in your component signature.
+export default function BlogPostPage({ params }: Props) {
   const blog = blogs.find(b => b.slug === params.slug);
+
   if (!blog) {
     notFound();
   }
+
   return (
     <main className="max-w-2xl mx-auto py-12 px-4">
       <Link href="/blogs" className="text-blue-600 hover:underline mb-4 inline-block">← Back to Blogs</Link>
@@ -33,10 +45,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   );
 }
 
-// CORRECTED: Use a standard function declaration.
-// This function tells Next.js which blog pages to pre-build at build time.
+// This function should remain a standard function declaration.
 export function generateStaticParams() {
-  // Good practice: derive params from your data source directly.
   return blogs.map(blog => ({
     slug: blog.slug,
   }));
