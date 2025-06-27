@@ -18,11 +18,7 @@ const blogs = [
   }
 ];
 
-type Props = {
-  params: { slug: string };
-};
-
-export default function BlogPostPage({ params }: Props) {
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const blog = blogs.find(b => b.slug === params.slug);
   if (!blog) return notFound();
   return (
@@ -35,10 +31,8 @@ export default function BlogPostPage({ params }: Props) {
   );
 }
 
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  // No need for await here, it's a simple synchronous return
-  return [
-    { slug: "how-i-built-my-portfolio" },
-    { slug: "why-i-love-open-source" }
-  ];
-}
+// Use a const, not a function, and do NOT annotate the type!
+export const generateStaticParams = () => [
+  { slug: "how-i-built-my-portfolio" },
+  { slug: "why-i-love-open-source" }
+];
