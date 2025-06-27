@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import React from 'react';
 import { AuroraText } from "../components/magicui/aurora-text";
 import ProjectsScroller from "../components/ProjectsScroller";
-import { g } from "framer-motion/client";
+
 
 
 const skills = [
