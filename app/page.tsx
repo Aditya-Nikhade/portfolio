@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import React from 'react';
 import { AuroraText } from "../components/magicui/aurora-text";
 import ProjectsScroller from "../components/ProjectsScroller";
-
+import { Analytics } from "@vercel/analytics/next"
 
 
 const skills = [
