@@ -4,6 +4,7 @@ import React from 'react';
 import { AuroraText } from "../components/magicui/aurora-text";
 import ProjectsScroller from "../components/ProjectsScroller";
 import { Analytics } from "@vercel/analytics/next"
+import Link from "next/link";
 
 
 const skills = [
@@ -38,7 +39,7 @@ const projects = [
   {
     title: "ChatApp",
     description: "A classic deployed chat application made with MERN, Redis and Socket.io",
-    link: "#", // Add a dummy link if needed
+    link: "https://chatapp.anikhade.com", // Add a dummy link if needed
     githubLink: "https://github.com/Aditya-Nikhade/ec2_cicd",
     imageLink: "/chatapp.png"
   },
@@ -154,14 +155,15 @@ export default function Home() {
             </a>
           </div>
           {/* Big Blogs Button below links */}
-          <a
+          <Link
             href="/blogs"
             className="border-2 border-foreground bg-white px-10 py-6 shadow-[4px_4px_0px_0px_var(--border)] text-2xl font-bold hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center w-full mb-2"
           >
             Blogs
-          </a>
+          </Link>
         </div>
       </section>
+      <Analytics />
     </main>
   );
 }
