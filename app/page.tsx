@@ -39,14 +39,14 @@ const projects = [
   {
     title: "ChatApp",
     description: "A classic deployed chat application made with MERN, Redis and Socket.io",
-    link: "https://chatapp.anikhade.com", // Add a dummy link if needed
+    link: "https://chatapp.anikhade.com", 
     githubLink: "https://github.com/Aditya-Nikhade/ec2_cicd",
     imageLink: "/chatapp.png"
   },
   {
     title: "Insight-Bot",
     description: "An AI-powered analytics tool which provides details about sales, customers and products",
-    link: "#",
+    link: "https://insightbot.anikhade.com", 
     githubLink: "https://github.com/Aditya-Nikhade/insight-bot",
     imageLink: "/insightbot.png"
   },
