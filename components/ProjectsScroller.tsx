@@ -12,7 +12,7 @@ interface Project {
 
 export default function ProjectsScroller({ projects }: { projects: Project[] }) {
   return (
-    <div className="h-full bg-secondary-background border-2 border-foreground shadow-[4px_4px_0px_0px_var(--border)] px-6 py-4 flex flex-col gap-4">
+    <div className="h-full bg-[#fff200] border-2 border-foreground shadow-[4px_4px_0px_0px_var(--border)] px-6 py-4 flex flex-col gap-4">
       <div className="flex items-center justify-between mb-4">
         <h2 className="font-archivo text-3xl font-bold flex-1 text-center">Projects</h2>
       </div>
@@ -21,7 +21,7 @@ export default function ProjectsScroller({ projects }: { projects: Project[] }) 
           <div
             key={index}
             style={{ flex: "1 1 calc(50% - 1.5rem)" }}
-            className="bg-neutral-100 border-2 border-neutral-200 shadow-[2px_2px_0px_0px_var(--border)] flex flex-col"
+            className="bg-neutral-100 border-2 border-foreground shadow-[2px_2px_0px_0px_var(--border)] flex flex-col hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
           >
             {/* Top Content */}
             <div className="p-4 flex flex-col flex-grow">
@@ -32,14 +32,21 @@ export default function ProjectsScroller({ projects }: { projects: Project[] }) 
                 </a>
               </h3>
               <p className="text-sm text-neutral-700 mb-3 flex-grow">{project.description}</p>
-              <a
+              {(project.title!=="A few shell scripts")?(<a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-blue-600 hover:underline mt-auto"
               >
                 View Project →
-              </a>
+              </a>):(<a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-blue-600 hover:underline mt-auto"
+              >
+               View Scripts →
+              </a>)}
             </div>
             {/* Bottom Image */}
             <div className="relative w-full h-40 border-t-2 border-neutral-300">

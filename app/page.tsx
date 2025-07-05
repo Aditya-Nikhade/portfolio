@@ -51,21 +51,28 @@ const projects = [
     imageLink: "/insightbot.png"
   },
   {
-    title: "In progress",
-    description: "A small, but interesting one, coming soon.",
-    link: "#",
-    githubLink: "https://github.com/Aditya-Nikhade/In-progress",
-    imageLink: "/work_in_progress.jpg"
+    title: "Geofence",
+    description: "A niche use of Redis geospatial data structure",
+    link: "https://geofence.anikhade.com",
+    githubLink: "https://github.com/Aditya-Nikhade/geofence",
+    imageLink: "/geofence.png"
   },
+  {
+    title: "A few shell scripts",
+    description: "Shell scripts for system monitoring and automated file management tasks.",
+    link: "https://github.com/Aditya-Nikhade/shell-scripts",
+    githubLink: "https://github.com/Aditya-Nikhade/geofence",
+    imageLink: "/shell_script.png"
+  }
 ];
 
 export default function Home() {
   return (
     <main className="relative min-h-screen w-full background-font-base grid grid-cols-12 gap-6 px-6 py-6 overflow-x-hidden">
       {/* Left Column */}
-      <section className="bg-white col-span-12 lg:col-span-3 flex flex-col gap-4 z-10">
+      <section className="col-span-12 lg:col-span-3 flex flex-col gap-4 z-10">
         {/* Profile Box */}
-        <div className="bg-secondary-background border-2 border-foreground shadow-[4px_4px_0px_0px_var(--border)] px-6 py-4 flex items-center gap-6 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+        <div className="bg-white border-2 border-foreground shadow-[4px_4px_0px_0px_var(--border)] px-6 py-4 flex items-center gap-6 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
           <Image
             src="/image.png"
             alt="Profile picture"
@@ -81,7 +88,7 @@ export default function Home() {
           </div>
         </div>
         {/* Skills Box */}
-        <div className="bg-secondary-background border-2 border-foreground shadow-[4px_4px_0px_0px_var(--border)] px-6 py-4 flex flex-col gap-4">
+        <div className="bg-white border-2 border-foreground shadow-[4px_4px_0px_0px_var(--border)] px-6 py-4 flex flex-col gap-4 mt-4">
           <h2 className="font-archivo text-2xl font-bold">Skills</h2>
           <div className="flex flex-col gap-4">
             {skills.map((group) => (
@@ -157,7 +164,7 @@ export default function Home() {
           {/* Big Blogs Button below links */}
           <Link
             href="/blogs"
-            className="border-2 border-foreground bg-white px-10 py-6 shadow-[4px_4px_0px_0px_var(--border)] text-2xl font-bold hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center w-full mb-2"
+            className="border-2 border-foreground bg-[#ff6ad5] px-10 py-6 shadow-[4px_4px_0px_0px_var(--border)] text-2xl font-bold hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center w-full mb-2"
           >
             Blogs
           </Link>
