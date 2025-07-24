@@ -72,19 +72,14 @@ export default function Home() {
       {/* Left Column */}
       <section className="col-span-12 lg:col-span-3 flex flex-col gap-4 z-10">
         {/* Profile Box */}
-        <div className="bg-white border-2 border-foreground shadow-[4px_4px_0px_0px_var(--border)] px-6 py-4 flex items-center gap-6 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
-          <Image
-            src="/image.png"
-            alt="Profile picture"
-            width={96}
-            height={96}
-            className="object-cover w-24 h-24 border-2 border-foreground shadow-[4px_4px_0px_0px_var(--border)] flex-shrink-0"
-            priority
-          />
+        <div className="bg-white border-2 border-foreground shadow-[4px_4px_0px_0px_var(--border)] px-6 py-4 flex flex-col items-center gap-2 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
           <div className="flex flex-col">
             <AuroraText className="font-bold text-4xl font-archivo mb-1 text-left">
-              Hi! <br /> I&apos;m Aditya
+              Hi! I&apos;m Aditya
             </AuroraText>
+          </div>
+          <div className="flex flex-col">
+            <div>21 yo. Currently enthusiastic about DevOps side of things with an eye for good UI/UX and design</div>
           </div>
         </div>
         {/* Skills Box */}
