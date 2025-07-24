@@ -74,9 +74,9 @@ export default function Home() {
         {/* Profile Box */}
         <div className="bg-white border-2 border-foreground shadow-[4px_4px_0px_0px_var(--border)] px-6 py-4 flex flex-col items-center gap-2 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
           <div className="flex flex-col">
-            <AuroraText className="font-bold text-4xl font-archivo mb-1 text-left">
+            <div className="font-bold text-4xl font-archivo mb-1 text-left">
               Hi! I&apos;m Aditya
-            </AuroraText>
+            </div>
           </div>
           <div className="flex flex-col">
             <div>21 yo. Currently enthusiastic about DevOps side of things with an eye for good UI/UX and design</div>
@@ -159,7 +159,7 @@ export default function Home() {
           {/* Big Blogs Button below links - COMMENTED OUT */}
           <Link
             href="/blogs"
-            className="border-2 border-foreground bg-[#ff6ad5] px-10 py-6 shadow-[4px_4px_0px_0px_var(--border)] text-2xl font-bold hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center w-full mb-2"
+            className="border-2 border-foreground bg-[#ffffff] px-10 py-6 shadow-[4px_4px_0px_0px_var(--border)] text-2xl font-bold hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center w-full mb-2"
           >
             Blogs
           </Link>

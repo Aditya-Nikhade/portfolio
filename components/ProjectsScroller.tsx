@@ -12,7 +12,7 @@ interface Project {
 
 export default function ProjectsScroller({ projects }: { projects: Project[] }) {
   return (
-    <div className="h-full bg-[#fff200] border-2 border-foreground shadow-[4px_4px_0px_0px_var(--border)] px-6 py-4 flex flex-col gap-4">
+    <div className="h-full bg-[#ffffff] border-2 border-foreground shadow-[4px_4px_0px_0px_var(--border)] px-6 py-4 flex flex-col gap-4">
       <div className="flex items-center justify-between mb-4">
         <h2 className="font-archivo text-3xl font-bold flex-1 text-center">Projects</h2>
       </div>
