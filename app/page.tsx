@@ -157,12 +157,12 @@ export default function Home() {
             </a>
           </div>
           {/* Big Blogs Button below links - COMMENTED OUT */}
-          <Link
+          {/* <Link
             href="/blogs"
             className="border-2 border-foreground bg-[#ffffff] px-10 py-6 shadow-[4px_4px_0px_0px_var(--border)] text-2xl font-bold hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center w-full mb-2"
           >
             Blogs
-          </Link>
+          </Link> */}
         </div>
       </section>
       <Analytics />
